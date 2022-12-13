@@ -1,9 +1,11 @@
 <script setup>
+import HelloWorld from './components/HelloWorld.vue'
 import TabBar from './components/TabBar.vue'
 </script>
 
 <template>
-  <router-view></router-view>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
   <div class="tab-bar"><TabBar /></div>
 </template>
 
