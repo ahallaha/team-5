@@ -1,0 +1,6 @@
+{
+  "appId": "com.team5.app",
+  "appName": "team-5",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
