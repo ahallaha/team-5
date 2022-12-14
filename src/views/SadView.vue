@@ -1,5 +1,28 @@
 <script setup>
 import BottomButton from '../components/BottomButton.vue'
+import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
+const screeningButtons = [
+{
+        text: "Depressed",
+        id: "a",
+    },
+    {
+        text: "Scared",
+        id: "b",
+    },
+    {
+        text: "Lonely",
+        id: "c",
+    },
+    {
+        text: "Tired",
+        id: "d",
+    },
+    {
+        text: "Frustrated",
+        id: "e",
+    },
+]
 </script>
 
 <template>
@@ -11,14 +34,7 @@ import BottomButton from '../components/BottomButton.vue'
             <h1>We're sorry to hear you're feeling sad today.</h1>
             <p>Can you click on some of the emotions you are feeling?</p>
         </div>
-        <div class="screeners">
-            <button class="screener">Depressed</button>
-            <button class="screener">Scared</button>
-            <button class="screener">Lonely</button>
-            <button class="screener">Tired</button>
-            <button class="screener">Frustrated</button>
-        </div>
-
+        <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
         <BottomButton text="Next"></BottomButton>
     </div>
 </template>
@@ -55,7 +71,7 @@ p {
     padding-top: 7rem;
 }
 
-.screeners {
+/* .screeners {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -74,5 +90,5 @@ p {
     padding: 4px 14px;
     border-radius: 50px;
     max-height: 47px;
-}
+} */
 </style>
