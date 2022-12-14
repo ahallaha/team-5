@@ -11,13 +11,12 @@
 
 <style scoped>
     .tab-bar {
-        background-color: lightgray;
-        border-radius: 16px 16px 0px 0px;
+        background: #FFFFFF;
     }
 
     button {
         width: 33%;
-        background: none;
+        background: #FFFFFF;
         color: black;
         border: none;
         height: 100%;
