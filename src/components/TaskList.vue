@@ -1,29 +1,8 @@
 <script setup>
 import TaskCard from './TaskCard.vue'
+import { useStore } from "../stores/main";
 
-const tasks = [
-    {
-        name: 'Breathing exercises',
-        points: 10,
-        icon: './tasks/Relax.png',
-        completed: true,
-        color: '#E6FBFF'
-    },
-    {
-        name: 'Take medications',
-        points: 10,
-        icon: '',
-        completed: false,
-        color: '#FBE2CC'
-    },
-    {
-        name: 'Get active',
-        points: 10,
-        icon: '',
-        completed: false,
-        color: '#FBDFED'
-    }
-]
+const store = useStore()
 </script>
 
 <template>
@@ -31,7 +10,7 @@ const tasks = [
         Today's tasks
     </h2>
     <span class="task-list">
-        <TaskCard v-for="task in tasks" :task="task" :key="task.name"></TaskCard>
+        <TaskCard v-for="task in store.tasks" :task="task" :key="task.name"></TaskCard>
     </span>
 </template>
 

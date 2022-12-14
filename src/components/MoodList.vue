@@ -6,25 +6,25 @@ const moods = [
         name: 'Happy',
         color: '#F09E54',
         href: '/moods/happy',
-        icon: './moods/happy_icon.svg'
+        icon: '/moods/happy_icon.svg'
     },
     {
         name: 'Mostly happy',
         color: '#EF5DA8',
         href: '/moods/happy',
-        icon: './moods/mostly_happy_icon.svg'
+        icon: '/moods/mostly_happy_icon.svg'
     },
     {
         name: 'A little sad',
         color: '#7D54F0',
         href: '/moods/sad',
-        icon: './moods/little_sad_icon.svg'
+        icon: '/moods/little_sad_icon.svg'
     },
     {
         name: 'Sad',
         color: '#65D2D0',
         href: '/moods/sad',
-        icon: './moods/sad_icon.svg'
+        icon: '/moods/sad_icon.svg'
     }
 ]
 </script>

@@ -1,5 +1,7 @@
 <script setup>
 import { defineProps, ref } from 'vue'
+import { useStore } from "../stores/main";
+
 // eslint-disable-next-line
 const props = defineProps({
     task: {
@@ -11,10 +13,13 @@ const props = defineProps({
     }
 })
 
+const store = useStore()
+
 const completed = ref(props.task.completed)
 
 function check() {
     completed.value = !completed.value
+    store.updateTask({ ...props.task, completed: completed.value })
 }
 </script>
 

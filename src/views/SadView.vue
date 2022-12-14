@@ -1,29 +1,29 @@
 <script setup>
-import NextButton from '../components/NextButton.vue'
+import BottomButton from '../components/BottomButton.vue'
 </script>
 
 <template>
     <div class="main">
+        <div class="header-image-wrapper">
+            <img src="/heading/sad_image.png" />
+        </div>
         <div class="content">
             <h1>We're sorry to hear you're feeling sad today.</h1>
-            <p>can you click on some of the emotions you are feeling?</p>
+            <p>Can you click on some of the emotions you are feeling?</p>
         </div>
-        <!-- button class="next-button">Next</button -->
-        <NextButton></NextButton>
+        <div class="screeners">
+            <button class="screener">Depressed</button>
+            <button class="screener">Scared</button>
+            <button class="screener">Lonely</button>
+            <button class="screener">Tired</button>
+            <button class="screener">Frustrated</button>
+        </div>
+
+        <BottomButton text="Next"></BottomButton>
     </div>
 </template>
 
 <style scoped>
-.next-button {
-    background-color: #4949c9;
-    width: 100%;
-    /* margin: auto; */
-    color: white;
-    font-size: 16px;
-    padding: .25rem;
-    align-self: stretch;
-}
-
 .main {
     padding: 1rem;
     background-color: #e7fbff;
@@ -34,5 +34,45 @@ import NextButton from '../components/NextButton.vue'
     margin-left: 25px;
     margin-right: 25px;
 
+}
+
+p {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: Alegreya;
+    margin: 2rem 0;
+}
+
+.header-image {
+    width: 191px;
+    height: 162px;
+    left: 87px;
+    top: 113px;
+}
+
+.header-image-wrapper {
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.screeners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    height: 150px;
+}
+
+.screener {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #4949c9;
+    background-color: #e7fbff;
+    border-style: solid;
+    border-color: #4949c9;
+    padding: 4px 14px;
+    border-radius: 50px;
+    max-height: 47px;
 }
 </style>
