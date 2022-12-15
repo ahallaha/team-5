@@ -5,6 +5,7 @@ import WeCanHelpView from "../views/WeCanHelpView.vue";
 import HappyView from "../views/HappyView.vue";
 import DaysView from "../views/DaysView.vue";
 import ExploreView from "../views/ExploreView.vue";
+import GetHelpView from "../views/GetHelpView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
@@ -45,6 +46,11 @@ const router = createRouter({
       name: "wecanhelp",
       component: WeCanHelpView,
     },
+    {
+      path: "/gethelp",
+      name: "gethelp",
+      component: GetHelpView
+    }
   ],
 });
 

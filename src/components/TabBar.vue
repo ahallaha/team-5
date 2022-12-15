@@ -16,7 +16,11 @@ function isSelected(name) {
 
 onMounted(async () => {
     await router.isReady()
-    selected.value = route.name
+    if (route.name === 'gethelp') {
+        selected.value = 'days'
+    } else {
+        selected.value = route.name
+    }
 })
 </script>
 

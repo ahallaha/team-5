@@ -1,7 +1,6 @@
 <script setup>
 import TopBar from '../components/TopBar.vue'
 import RewardCard from '../components/my_days_cards/RewardCard.vue'
-import MoodCalendarCard from '../components/my_days_cards/MoodCalendarCard.vue'
 import MoodOverviewCard from '../components/my_days_cards/MoodOverviewCard.vue'
 import MedicationsCard from '../components/my_days_cards/MedicationsCard.vue'
 import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
@@ -10,15 +9,10 @@ import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
 <template>
     <div class="main">
         <TopBar></TopBar>
-        <h1 class="title">My days</h1>
-        <h2 class="section-title">Rewards</h2>
-        <RewardCard class="day-card"></RewardCard>
-        <h2 class="section-title">Mood</h2>
-        <MoodCalendarCard class="day-card"></MoodCalendarCard>
-        <MoodOverviewCard class="day-card"></MoodOverviewCard>
-        <h2 class="section-title">Medications</h2>
+        <h1 class="title">Get Help</h1>
         <MedicationsCard class="day-card"></MedicationsCard>
-        <h2 class="section-title">Share</h2>
+        <MoodOverviewCard class="day-card"></MoodOverviewCard>
+        <RewardCard class="day-card"></RewardCard>
         <FeelingsCard class="day-card"></FeelingsCard>
     </div>
 </template>

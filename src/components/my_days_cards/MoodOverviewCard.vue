@@ -8,7 +8,7 @@
             <li><span class="li-title">Scared</span> - Nearly everyday</li>
             <li><span class="li-title">Frustrated</span> - Several days</li>
         </ul>
-        <a>Find someone to talk to</a>
+        <router-link to="/gethelp">Find someone to talk to</router-link>
     </div>
 </template>
 
@@ -20,6 +20,7 @@
 a {
     color: #4949C9;
     font-weight: 700;
+    text-decoration-line: none;
 }
 
 ul {
