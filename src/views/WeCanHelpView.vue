@@ -1,5 +1,6 @@
 <script setup>
 import BottomButton from '../components/BottomButton.vue'
+import DoneButton from '../components/DoneButton.vue'
 import router from '../router'
 
 // const headingContent = `Can you describe the things that are making you feel this way?`
@@ -18,7 +19,8 @@ const nextAction = () => {
             <p>Click below for options to help you with your emotional needs.</p>
         </div>
         <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
-        <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
+        <BottomButton @bottom-button-clicked="nextAction" text="See help options"></BottomButton>
+        <DoneButton></DoneButton>
     </div>
 </template>
 

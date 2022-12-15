@@ -7,7 +7,7 @@ import router from '../router'
 
 const store = useStore()
 
-// const router = useRouter()
+store.updateIsSadPage(true)
 
 const screeningButtons = [
 {
@@ -34,6 +34,7 @@ const screeningButtons = [
 
 const nextAction = () => {
     const moods = store.moods
+    store.updateIsSadPage(false)
 
     if (moods.length === 0) {
         router.push('/moods/wecanhelp')

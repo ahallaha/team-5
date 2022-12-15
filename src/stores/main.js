@@ -30,7 +30,8 @@ export const useStore = defineStore("main", {
                     color: '#FBDFED'
                 }
             ],
-            moods: []
+            moods: [],
+            isSadPage: false,
         };
     },
     actions: {
@@ -39,6 +40,13 @@ export const useStore = defineStore("main", {
         },
         updateMoods(moods, index) {
             this.moods = moods
+        },
+        updateIsSadPage(isSad) {
+            if(isSad) {
+                this.isSadPage = true
+            } else {
+                this.isSadPage = false
+            }
         }
     },
 });

@@ -6,20 +6,23 @@ const store = useStore()
 
 const props = defineProps({
     text: String,
-    id: String
+    id: String,
 })
 
 const toggleSelect = () => {
     const { id } = toRefs(props);
     const element = document.getElementById(id.value)
     element.classList.toggle("selected")
-    const mood = element.textContent
-    const { moods } = store
-    if (moods.includes(mood)) {
-        moods.splice(moods.indexOf(mood), 1)
-        store.updateMoods(moods)
-    } else {
-        store.updateMoods([mood, ...moods])
+
+    if (store.isSadPage) {
+        const mood = element.textContent
+        const { moods } = store
+        if (moods.includes(mood)) {
+            moods.splice(moods.indexOf(mood), 1)
+            store.updateMoods(moods)
+        } else {
+            store.updateMoods([mood, ...moods])
+        }
     }
 }
 </script>

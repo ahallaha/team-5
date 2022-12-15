@@ -5,6 +5,7 @@ import { useStore } from "../stores/main";
 import router from '../router'
 
 const store = useStore()
+store.updateIsSadPage(false)
 
 const screeningButtonContent =
 {
@@ -37,7 +38,7 @@ const screeningButtonContent =
 }
 // get the current mood, corresponding button data, and update moods
 const moods = store.moods
-const mood = moods.pop()
+let mood = moods.pop()
 const screeningButtons = screeningButtonContent[mood]
 
 const headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
@@ -45,9 +46,12 @@ const nextAction = () => {
     const moods = store.moods
 
     if (moods.length === 0) {
+        console.log('!!! no more moods')
         router.push('/moods/wecanhelp')
     } else {
-        router.push({ path: '/moods/feelings' })
+        console.log('!!! still more moods')
+        mood = moods.pop()
+        // router.push({ path: '/moods/feelings' })
     }
 }
 </script>
