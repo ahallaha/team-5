@@ -4,7 +4,7 @@ import DoneButton from '../components/DoneButton.vue'
 import router from '../router'
 
 const nextAction = () => {
-    router.push('/')
+    router.push('/gethelp')
 }
 </script>
 
