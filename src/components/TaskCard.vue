@@ -57,11 +57,9 @@ function check() {
     background-color: white;
     height: 40px;
     width: 40px;
-}
-
-.task-icon>img {
-    margin-left: 8px;
-    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .task-text {
@@ -70,6 +68,7 @@ function check() {
 
 .task-title {
     font-size: 16px;
+    font-weight: 700;
 }
 
 .points {
