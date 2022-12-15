@@ -1,8 +1,10 @@
 <script setup>
+import { ref } from 'vue'
 import BottomButton from '../components/BottomButton.vue'
-import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
+// import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
 import { useStore } from "../stores/main";
 import router from '../router'
+import FeelingsInteraction from '../components/FeelingsInteraction.vue';
 
 const store = useStore()
 store.updateIsSadPage(false)
@@ -17,7 +19,7 @@ const screeningButtonContent =
     Lonely: [
         { text: "Feel like your life is empty?", id: "1" },
         { text: "Feel worthless the way things are?", id: "2" },
-        { text: "You don’t have anyone to spend time with?", id: "3" },
+        { text: "No one to spend time with?", id: "3" },
     ],
     Scared: [
         { text: "Afraid something bad will happen?", id: "1" },
@@ -33,15 +35,17 @@ const screeningButtonContent =
     Frustrated:[
         { text: "Irritated often at people or things?", id: "1" },
         { text: "Most people are better off than you?", id: "2" },
-        { text: "Have more problems with memory than most?", id: "3" },
+        { text: "More memory problems than most?", id: "3" },
     ],
 }
 // get the current mood, corresponding button data, and update moods
 const moods = store.moods
 let mood = moods.pop()
-const screeningButtons = screeningButtonContent[mood]
+let screeningButtons = screeningButtonContent[mood]
+const keyValue = ref(0);
+console.log('!!! keyValue:', keyValue.value)
 
-const headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
+let headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
 const nextAction = () => {
     const moods = store.moods
 
@@ -51,7 +55,11 @@ const nextAction = () => {
     } else {
         console.log('!!! still more moods')
         mood = moods.pop()
-        // router.push({ path: '/moods/feelings' })
+        screeningButtons = screeningButtonContent[mood]
+        headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
+        keyValue.value ++
+        console.log('!!! keyValue:', keyValue.value)
+        router.push({ path: '/moods/feelings' })
     }
 }
 </script>
@@ -61,11 +69,12 @@ const nextAction = () => {
         <div class="header-image-wrapper">
             <img src="/heading/sad_image.png" />
         </div>
-        <div class="content">
+        <!-- <div class="content">
             <h1>{{ headingContent }}</h1>
             <p>Tap on all that apply.</p>
         </div>
-        <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
+        <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer> -->
+        <FeelingsInteraction :headingContent="headingContent" :screeningButtons="screeningButtons" :key="keyValue"></FeelingsInteraction>
         <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
     </div>
 </template>
@@ -91,12 +100,12 @@ p {
     margin: 2rem 0;
 }
 
-.header-image {
+/* .header-image {
     width: 191px;
     height: 162px;
     left: 87px;
     top: 113px;
-}
+} */
 
 .header-image-wrapper {
     text-align: center;

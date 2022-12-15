@@ -41,7 +41,7 @@ const toggleSelect = () => {
     border-style: solid;
     border-color: #4949c9;
     padding: 4px 14px;
-    margin: 0 14px;
+    margin: 0 8px;
     border-radius: 50px;
     max-height: 47px;
 }
