@@ -46,13 +46,13 @@ import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
     border: 1px solid #EDE6FC;
 }
 
-.day-card>>>h2 {
+.day-card:deep(h2) {
     margin-top: 0px;
     margin-bottom: 8px;
     font-size: 25px;
 }
 
-.day-card>>>a {
+.day-card:deep(a) {
     font-weight: 700;
     font-size: 20px;
     text-decoration-line: none;

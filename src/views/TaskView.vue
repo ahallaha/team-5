@@ -17,6 +17,7 @@ import TopBar from '../components/TopBar.vue'
 .main {
     margin-left: 25px;
     margin-right: 25px;
+    margin-bottom: 75px;
 }
 
 .title {

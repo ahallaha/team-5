@@ -40,13 +40,13 @@ import EmergencyCard from '../components/get_help_cards/EmergencyCard.vue'
     border: 1px solid #EDE6FC;
 }
 
-.help-card>>>h2 {
+.help-card:deep(h2) {
     margin-top: 0px;
     margin-bottom: 8px;
     font-size: 25px;
 }
 
-.help-card>>>a {
+.help-card:deep(a) {
     font-weight: 700;
     font-size: 20px;
 }

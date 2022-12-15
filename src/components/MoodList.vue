@@ -1,5 +1,6 @@
 <script setup>
 import MoodCard from './MoodCard.vue'
+import PointsMarker from './PointsMarker.vue'
 
 const moods = [
     {
@@ -30,9 +31,12 @@ const moods = [
 </script>
 
 <template>
-    <h2 class="header">
-        How are you feeling today?
-    </h2>
+    <div class="header-container">
+        <h2 class="header">
+            How are you feeling today?
+        </h2>
+        <PointsMarker :points="5"></PointsMarker>
+    </div>
     <span class="mood-list">
         <MoodCard v-for="mood in moods" :mood="mood" :key="mood.name"></MoodCard>
     </span>
@@ -46,6 +50,13 @@ body {
 .header {
     font-size: 22px;
     margin-bottom: 23px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
 }
 
 .mood-list {

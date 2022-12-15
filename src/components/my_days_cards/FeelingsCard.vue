@@ -2,7 +2,7 @@
     <div class="card">
         <h2>Share your feelings</h2>
         <div class="body">Create a PDF of this imformation to share your feelings with a doctor or family member.</div>
-        <a>Create PDF</a>
+        <a href="/days/report.pdf" target="_blank">Create PDF <img src="/days/upload.png" /></a>
     </div>
 </template>
 
@@ -13,6 +13,11 @@
 
 a {
     color: #EF5DA8;
+}
+
+a>img {
+    position: relative;
+    top: 5px;
 }
 
 ul {
