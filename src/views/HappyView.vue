@@ -1,5 +1,6 @@
 <script setup>
 import BottomButton from '../components/BottomButton.vue'
+import DoneButton from '../components/DoneButton.vue'
 </script>
 
 <template>
@@ -12,7 +13,8 @@ import BottomButton from '../components/BottomButton.vue'
             <p>Take a moment to reflect on what is happening around you tht makes you feel so good today.</p>
             <p>Writing in your journal can help to capture the good feelings and keep them top of mind.</p>
         </div>
-        <BottomButton text="Next"></BottomButton>
+        <BottomButton text="View journaling activites"></BottomButton>
+        <DoneButton></DoneButton>
     </div>
 </template>
 

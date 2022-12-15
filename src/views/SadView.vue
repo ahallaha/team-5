@@ -1,6 +1,14 @@
 <script setup>
 import BottomButton from '../components/BottomButton.vue'
 import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
+import { useStore } from "../stores/main";
+// import { useRouter } from 'vue-router'
+import router from '../router'
+
+const store = useStore()
+
+// const router = useRouter()
+
 const screeningButtons = [
 {
         text: "Depressed",
@@ -23,6 +31,22 @@ const screeningButtons = [
         id: "e",
     },
 ]
+
+const nextAction = () => {
+    const moods = store.moods
+
+    if (moods.length === 0) {
+        router.push('/moods/wecanhelp')
+        // window.location.replace('/moods/wecanhelp')
+    } else {
+        router.push({ path: '/moods/feelings' })
+        // window.location.href = '/moods/feelings'
+    }
+}
+
+const logThis = () => {
+    console.log('logThis was triggered')
+}
 </script>
 
 <template>
@@ -35,7 +59,7 @@ const screeningButtons = [
             <p>Can you click on some of the emotions you are feeling?</p>
         </div>
         <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
-        <BottomButton text="Next"></BottomButton>
+        <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
     </div>
 </template>
 

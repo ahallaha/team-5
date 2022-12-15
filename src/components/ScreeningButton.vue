@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps, toRefs } from 'vue'
+import { useStore } from "../stores/main";
+
+const store = useStore()
 
 const props = defineProps({
     text: String,
@@ -10,8 +13,14 @@ const toggleSelect = () => {
     const { id } = toRefs(props);
     const element = document.getElementById(id.value)
     element.classList.toggle("selected")
-//     completed.value = !completed.value
-//     store.updateTask({ ...props.task, completed: completed.value })
+    const mood = element.textContent
+    const { moods } = store
+    if (moods.includes(mood)) {
+        moods.splice(moods.indexOf(mood), 1)
+        store.updateMoods(moods)
+    } else {
+        store.updateMoods([mood, ...moods])
+    }
 }
 </script>
 
@@ -33,6 +42,8 @@ const toggleSelect = () => {
     max-height: 47px;
 }
 .screener.selected {
-    background-color: #07e0e0;
+    color: #e7fbff;
+    background-color: #4949c9;
+    border-color: #4949c9;
 }
 </style>

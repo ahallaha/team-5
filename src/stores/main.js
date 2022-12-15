@@ -29,12 +29,16 @@ export const useStore = defineStore("main", {
                     completed: false,
                     color: '#FBDFED'
                 }
-            ]
+            ],
+            moods: []
         };
     },
     actions: {
         updateTask(task, index) {
             this.tasks[index] = task
+        },
+        updateMoods(moods, index) {
+            this.moods = moods
         }
     },
 });
