@@ -12,7 +12,9 @@ const props = defineProps({
 
 <template>
     <div class="container">
-        <div class="card"></div>
+        <div class="card">
+            <img :src="props.item.icon" />
+        </div>
         {{ props.item.title }}
     </div>
 </template>
@@ -31,5 +33,8 @@ const props = defineProps({
     width: 146px;
     border-radius: 20px;
     background-color: v-bind(item.color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

@@ -1,8 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 const selected = ref(route.name)
 
 function select(event) {
@@ -12,6 +13,11 @@ function select(event) {
 function isSelected(name) {
     return selected.value === name
 }
+
+onMounted(async () => {
+    await router.isReady()
+    selected.value = route.name
+})
 </script>
 
 <template>

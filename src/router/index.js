@@ -1,4 +1,4 @@
-import HomeView from "../views/HomeView.vue";
+import TaskView from "../views/TaskView.vue";
 import SadView from "../views/SadView.vue";
 import FeelingsView from "../views/FeelingsView.vue";
 import WeCanHelpView from "../views/WeCanHelpView.vue";
@@ -12,8 +12,8 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomeView,
+      name: "tasks",
+      component: TaskView,
     },
     {
       path: "/days",
