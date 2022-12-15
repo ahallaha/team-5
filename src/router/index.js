@@ -1,6 +1,7 @@
 import HomeView from "../views/HomeView.vue";
 import SadView from "../views/SadView.vue";
 import FeelingsView from "../views/FeelingsView.vue";
+import WeCanHelpView from "../views/WeCanHelpView.vue";
 import HappyView from "../views/HappyView.vue";
 import DaysView from "../views/DaysView.vue";
 import ExploreView from "../views/ExploreView.vue";
@@ -38,6 +39,11 @@ const router = createRouter({
       path: "/moods/feelings",
       name: "feelings",
       component: FeelingsView,
+    },
+    {
+      path: "/moods/wecanhelp",
+      name: "wecanhelp",
+      component: WeCanHelpView,
     },
   ],
 });

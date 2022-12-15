@@ -18,6 +18,7 @@ const props = defineProps({
     background-color: #4949c9;
     width: 100%;
     padding: 4px;
+    margin-top: 3rem;
     border-radius: 4px;
     color: white;
     font-size: 19px;

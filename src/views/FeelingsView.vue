@@ -2,56 +2,52 @@
 import BottomButton from '../components/BottomButton.vue'
 import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
 import { useStore } from "../stores/main";
+import router from '../router'
 
 const store = useStore()
 
 const screeningButtonContent =
 {
-    Sad: [
-        "Generally unsatisfied with your life?",
-        "Negative mood most of the time?",
-        "Feel your situation is hopeless?",  
+    Depressed: [
+        { text: "Unsatisfied with your life?", id: "1" },
+        { text: "Negative mood most of the time?", id: "2" },
+        { text: "Feel your situation is hopeless?",   id: "3" },
     ],
     Lonely: [
-        "Feel like your life is empty?",
-        "Feel worthless the way things are?",
-        "Feel like you don’t have anyone to spend time with?",
+        { text: "Feel like your life is empty?", id: "1" },
+        { text: "Feel worthless the way things are?", id: "2" },
+        { text: "You don’t have anyone to spend time with?", id: "3" },
     ],
     Scared: [
-        "Afraid something bad will happen?",
-        "Often feel helpless?",
-        "Prefer to stay at home rather than go out?",
+        { text: "Afraid something bad will happen?", id: "1" },
+        { text: "Often feel helpless?", id: "2" },
+        { text: "Stay at home rather than go out?", id: "3" },
     ],
     Tired: [
-        "Hard to sleep?",
-        "Hard to get out of bed?",
-        "Hard to eat?",
-        "Dropped any of your hobbies or interests?",
+        { text: "Hard to sleep?", id: "1" },
+        { text: "Hard to get out of bed?", id: "2" },
+        { text: "Hard to eat?", id: "3" },
+        // { text: "Dropped any of your hobbies or interests?", id: "4" },
     ],
     Frustrated:[
-        "Get irritated often at people or things?",
-        "Think most people are better off than you?",
-        "Feel like you have more problems with memory than most?",
+        { text: "Irritated often at people or things?", id: "1" },
+        { text: "Most people are better off than you?", id: "2" },
+        { text: "Have more problems with memory than most?", id: "3" },
     ],
 }
-
 // get the current mood, corresponding button data, and update moods
 const moods = store.moods
 const mood = moods.pop()
 const screeningButtons = screeningButtonContent[mood]
-// store.updateMoods(moods)
 
-const headingContent = `Can you describe the things that are making you feel this way?`
-// const headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
+const headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
 const nextAction = () => {
-    // retrieve moods
     const moods = store.moods
-    // if moods is empty, forward to 'we can help' page
-    // else re-render this page
+
     if (moods.length === 0) {
-        window.location.replace('/moods/wecanhelp');
+        router.push('/moods/wecanhelp')
     } else {
-        window.location.replace('/moods/feelings');
+        router.push({ path: '/moods/feelings' })
     }
 }
 </script>
@@ -66,7 +62,7 @@ const nextAction = () => {
             <p>Tap on all that apply.</p>
         </div>
         <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
-        <BottomButton text="Next"></BottomButton>
+        <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
     </div>
 </template>
 
@@ -85,6 +81,7 @@ const nextAction = () => {
 
 p {
     font-size: 22px;
+    font-weight: 700;
     line-height: 30px;
     font-family: Alegreya;
     margin: 2rem 0;

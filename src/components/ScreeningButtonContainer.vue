@@ -19,8 +19,9 @@ const props = defineProps(["options"])
 .screeners {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 14px;
-    height: 150px;
+    gap: 8px;
+    height: 127px;
 }
 </style>
