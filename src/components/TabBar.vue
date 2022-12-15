@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-const selected = ref("tasks")
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const selected = ref(route.name)
 
 function select(event) {
     selected.value = event.target.id

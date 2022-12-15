@@ -10,7 +10,7 @@ import TabBar from './components/TabBar.vue'
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Alegreya');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
 
 h1,
 h2 {
