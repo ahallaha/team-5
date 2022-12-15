@@ -14,16 +14,6 @@
 
 a {
     color: #CD7E37;
-    font-weight: 700;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-.li-title {
-    font-weight: 700;
 }
 
 .body {

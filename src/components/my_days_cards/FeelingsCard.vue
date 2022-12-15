@@ -13,7 +13,6 @@
 
 a {
     color: #EF5DA8;
-    font-weight: 700;
 }
 
 ul {

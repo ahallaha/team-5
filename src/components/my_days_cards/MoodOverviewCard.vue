@@ -19,8 +19,6 @@
 
 a {
     color: #4949C9;
-    font-weight: 700;
-    text-decoration-line: none;
 }
 
 ul {

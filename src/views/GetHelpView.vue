@@ -1,19 +1,19 @@
 <script setup>
 import TopBar from '../components/TopBar.vue'
-import RewardCard from '../components/my_days_cards/RewardCard.vue'
-import MoodOverviewCard from '../components/my_days_cards/MoodOverviewCard.vue'
-import MedicationsCard from '../components/my_days_cards/MedicationsCard.vue'
-import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
+import FriendshipCard from '../components/get_help_cards/FriendshipCard.vue'
+import TalkCard from '../components/get_help_cards/TalkCard.vue'
+import CommunityCard from '../components/get_help_cards/CommunityCard.vue'
+import EmergencyCard from '../components/get_help_cards/EmergencyCard.vue'
 </script>
 
 <template>
     <div class="main">
         <TopBar></TopBar>
         <h1 class="title">Get Help</h1>
-        <MedicationsCard class="day-card"></MedicationsCard>
-        <MoodOverviewCard class="day-card"></MoodOverviewCard>
-        <RewardCard class="day-card"></RewardCard>
-        <FeelingsCard class="day-card"></FeelingsCard>
+        <TalkCard class="help-card"></TalkCard>
+        <FriendshipCard class="help-card"></FriendshipCard>
+        <CommunityCard class="help-card"></CommunityCard>
+        <EmergencyCard class="help-card"></EmergencyCard>
     </div>
 </template>
 
@@ -33,20 +33,20 @@ import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
     margin-bottom: 8px;
 }
 
-.day-card {
+.help-card {
     margin-bottom: 16px;
     border-radius: 20px;
     padding: 13px 17px 17px 25px;
     border: 1px solid #EDE6FC;
 }
 
-.day-card>>>h2 {
+.help-card>>>h2 {
     margin-top: 0px;
     margin-bottom: 8px;
     font-size: 25px;
 }
 
-.day-card>>>a {
+.help-card>>>a {
     font-weight: 700;
     font-size: 20px;
 }

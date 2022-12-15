@@ -55,5 +55,6 @@ import FeelingsCard from '../components/my_days_cards/FeelingsCard.vue'
 .day-card>>>a {
     font-weight: 700;
     font-size: 20px;
+    text-decoration-line: none;
 }
 </style>
