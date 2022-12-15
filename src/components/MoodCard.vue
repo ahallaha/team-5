@@ -12,9 +12,9 @@ const props = defineProps({
 
 <template>
     <div class="main">
-        <a class="card" :href="mood.href">
+        <router-link class="card" :to="mood.href">
             <img :src="mood.icon" />
-        </a>
+        </router-link>
         <div class="mood-name">
             {{ mood.name }}
         </div>

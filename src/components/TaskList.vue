@@ -10,7 +10,7 @@ const store = useStore()
         Today's tasks
     </h2>
     <span class="task-list">
-        <TaskCard v-for="task in store.tasks" :task="task" :key="task.name"></TaskCard>
+        <TaskCard v-for="task, index in store.tasks" :task="task" :index="index" :key="task.id"></TaskCard>
     </span>
 </template>
 

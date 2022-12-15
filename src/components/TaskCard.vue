@@ -10,7 +10,8 @@ const props = defineProps({
         icon: String,
         completed: Boolean,
         color: String,
-    }
+    },
+    index: Number
 })
 
 const store = useStore()
@@ -19,7 +20,7 @@ const completed = ref(props.task.completed)
 
 function check() {
     completed.value = !completed.value
-    store.updateTask({ ...props.task, completed: completed.value })
+    store.updateTask({ ...props.task, completed: completed.value }, props.index)
 }
 </script>
 
