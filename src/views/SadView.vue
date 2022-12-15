@@ -53,7 +53,9 @@ const nextAction = () => {
             <p>Can you click on some of the emotions you are feeling?</p>
         </div>
         <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer>
-        <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
+        <div class="bb-wrapper">
+            <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
+        </div>
     </div>
 </template>
 
@@ -81,5 +83,9 @@ p {
 .header-image-wrapper {
     text-align: center;
     padding-top: 7rem;
+}
+
+.bb-wrapper {
+    margin-top: .9rem;
 }
 </style>

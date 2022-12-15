@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps } from 'vue'
-import ScreeningButton from './ScreeningButton.vue'
+import ScreeningButton from './WhatsImportantButton.vue'
 // eslint-disable-next-line
 const props = defineProps(["options"])
 </script>
@@ -19,9 +19,10 @@ const props = defineProps(["options"])
 .screeners {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: left;
     flex-wrap: wrap;
-    gap: 8px;
-    /* height: 127px; */
+    gap: 6px;
+    height: 107px;
+    margin: -.7rem;
 }
 </style>

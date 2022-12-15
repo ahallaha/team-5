@@ -6,13 +6,17 @@ import HappyView from "../views/HappyView.vue";
 import DaysView from "../views/DaysView.vue";
 import ExploreView from "../views/ExploreView.vue";
 import GetHelpView from "../views/GetHelpView.vue";
+import BlueSkyViewWelcome from "../views/BlueSkyViewWelcome.vue"
+import BlueSkyViewTwo from "../views/BlueSkyViewTwo.vue"
+import BlueSkyViewThree from "../views/BlueSkyViewThree.vue"
+import BlueSkyViewFour from "../views/BlueSkyViewFour.vue"
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: "/tasks",
       name: "tasks",
       component: TaskView,
     },
@@ -50,7 +54,27 @@ const router = createRouter({
       path: "/gethelp",
       name: "gethelp",
       component: GetHelpView
-    }
+    },
+    {
+      path: "/",
+      name: "welcome",
+      component: BlueSkyViewWelcome
+    },
+    {
+      path: "/welcome/2",
+      name: "welcomeTwo",
+      component: BlueSkyViewTwo
+    },
+    {
+      path: "/welcome/3",
+      name: "welcomeThree",
+      component: BlueSkyViewThree
+    },
+    {
+      path: "/welcome/4",
+      name: "welcomeFour",
+      component: BlueSkyViewFour
+    },
   ],
 });
 

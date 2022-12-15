@@ -1,7 +1,8 @@
 <script setup>
-// eslint-disable-next-line
+import router from '../router'
+
 const goHome = () => {
-    window.location.href = '/';
+    router.push('/tasks')
 }
 </script>
 

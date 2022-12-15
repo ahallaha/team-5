@@ -33,17 +33,16 @@ const toggleSelect = () => {
 
 <style scoped>
 .screener {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 25px;
+    line-height: 20px;
     color: #4949c9;
     background-color:#e7fbff;
     border-style: solid;
     border-color: #4949c9;
     padding: 4px 14px;
-    margin: 0 6px;
+    margin: 0 .5rem;
     border-radius: 50px;
-    max-height: 36px;
 }
 .screener.selected {
     color: #e7fbff;

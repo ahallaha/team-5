@@ -26,7 +26,7 @@ onMounted(async () => {
 
 <template>
     <div class="tab-bar">
-        <router-link to="/" class="link">
+        <router-link to="/tasks" class="link">
             <button id="tasks" :class="{ selected: isSelected('tasks') }" v-on:click="select">
                 <img src="/navbar/tasks.svg" />
                 <br />
