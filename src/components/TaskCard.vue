@@ -27,7 +27,7 @@ function check() {
 <template>
     <div class="card" v-on:click="check">
         <div class="task-icon">
-            <img :src="task.icon" style="margin-left:7px;margin-top:7px;" />
+            <img :src="task.icon" />
         </div>
         <div class="task-text">
             <div class="task-title">
@@ -57,6 +57,11 @@ function check() {
     background-color: white;
     height: 40px;
     width: 40px;
+}
+
+.task-icon>img {
+    margin-left: 8px;
+    margin-top: 8px;
 }
 
 .task-text {
