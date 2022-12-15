@@ -39,7 +39,7 @@ const nextAction = () => {
             <img src="/heading/tree_image.png" />
         </div>
         <div class="content">
-            <h1>Tell us what's important to you bt selecting some of your values below.</h1>
+            <h1>Tell us what's important to you by selecting some of your values below.</h1>
             <p>I value...</p>
         </div>
         <WhatsImportantButtonContainer :options="screeningButtons"></WhatsImportantButtonContainer>

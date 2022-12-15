@@ -67,8 +67,8 @@ const nextAction = () => {
 }
 
 .content {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
@@ -86,6 +86,6 @@ p {
 }
 
 .bb-wrapper {
-    margin-top: .9rem;
+    margin-top: 3.6rem;
 }
 </style>

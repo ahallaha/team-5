@@ -17,8 +17,10 @@ const nextAction = () => {
             <h1>We can help you find help.</h1>
             <p>Click below for options to help you with your emotional needs.</p>
         </div>
-        <BottomButton @bottom-button-clicked="nextAction" text="See help options"></BottomButton>
-        <DoneButton></DoneButton>
+        <div class="bb-wrapper">
+            <BottomButton @bottom-button-clicked="nextAction" text="See help options"></BottomButton>
+            <DoneButton></DoneButton>
+        </div>
     </div>
 </template>
 
@@ -32,7 +34,11 @@ const nextAction = () => {
 .content {
     margin-left: 25px;
     margin-right: 25px;
+    text-align: center;
+}
 
+.content > h1 {
+    padding: 0 2rem;
 }
 
 p {
@@ -46,5 +52,9 @@ p {
 .header-image-wrapper {
     text-align: center;
     padding-top: 6rem;
+    margin-bottom: 3rem;
+}
+.bb-wrapper {
+    margin-top: 5.2rem;
 }
 </style>

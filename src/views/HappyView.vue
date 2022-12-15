@@ -9,7 +9,7 @@ import DoneButton from '../components/DoneButton.vue'
             <img src="/heading/sun_image.png" />
         </div>
         <div class="content">
-            <h1>That's so great your feeling happy!</h1>
+            <h1>That's so great you're feeling happy!</h1>
             <p>Take a moment to reflect on what is happening around you tht makes you feel so good today.</p>
             <p>Writing in your journal can help to capture the good feelings and keep them top of mind.</p>
         </div>
@@ -40,6 +40,6 @@ p {
 
 .header-image-wrapper {
     text-align: center;
-    padding-top: 7rem;
+    padding-top: 6rem;
 }
 </style>

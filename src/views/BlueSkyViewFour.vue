@@ -14,7 +14,7 @@ const nextAction = () => {
             <img src="/heading/hotairballon_image.png" />
         </div>
         <div class="content">
-            <h1>Great job!<br />You earned 10 points for that activity.  There's logs of way to get points to spend in the Blue Skies mall.</h1>
+            <h1>Great job!<br />You earned 10 points for that activity.  There's lots of way to get points to spend in the Blue Skies mall.</h1>
         </div>
         <BottomButton @bottom-button-clicked="nextAction" text="Done"></BottomButton>
     </div>
