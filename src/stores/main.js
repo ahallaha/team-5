@@ -33,13 +33,8 @@ export const useStore = defineStore("main", {
         };
     },
     actions: {
-        updateTask(task) {
-            console.log(task)
-            const tasks = this.tasks
-            let t = tasks.find(x => x.id === task.id)
-            t = task
-            console.log(t)
-            // this.tasks.find(x => x.id === task.id) = task
+        updateTask(task, index) {
+            this.tasks[index] = task
         }
     },
 });

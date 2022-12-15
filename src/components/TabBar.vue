@@ -3,39 +3,37 @@ import { ref } from 'vue'
 const selected = ref("tasks")
 
 function select(event) {
-    console.log(event.target)
     selected.value = event.target.id
 }
 
 function isSelected(name) {
-    console.log(selected.value === name)
     return selected.value === name
 }
 </script>
 
 <template>
     <div class="tab-bar">
-        <button id="tasks" :class="{
-            selected: isSelected('tasks')
-        }" v-on:click="select">
-            <img src="/navbar/tasks.svg" />
-            <br />
-            Tasks
-        </button>
-        <button id="days" :class="{
-            selected: isSelected('days')
-        }" v-on:click="select">
-            <img src="/navbar/days.svg" />
-            <br />
-            My days
-        </button>
-        <button id="explore" :class="{
-            selected: isSelected('explore')
-        }" v-on:click="select">
-            <img src="/navbar/explore.svg" />
-            <br />
-            Explore
-        </button>
+        <router-link to="/" class="link">
+            <button id="tasks" :class="{ selected: isSelected('tasks') }" v-on:click="select">
+                <img src="/navbar/tasks.svg" />
+                <br />
+                Tasks
+            </button>
+        </router-link>
+        <router-link to="/days" class="link">
+            <button id="days" :class="{ selected: isSelected('days') }" v-on:click="select">
+                <img src="/navbar/days.svg" />
+                <br />
+                My days
+            </button>
+        </router-link>
+        <router-link to="/explore" class="link">
+            <button id="explore" :class="{ selected: isSelected('explore') }" v-on:click="select">
+                <img src="/navbar/explore.svg" />
+                <br />
+                Explore
+            </button>
+        </router-link>
     </div>
 </template>
 
@@ -47,9 +45,13 @@ function isSelected(name) {
     height: 100%;
 }
 
-button {
-    flex-shrink: 0.5;
+.link {
     flex-grow: 1;
+    text-align: center;
+}
+
+button {
+    /* flex-shrink: 0.5; */
     background: #FFFFFF;
     color: black;
     border: none;
