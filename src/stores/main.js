@@ -9,7 +9,7 @@ export const useStore = defineStore("main", {
                     id: 1,
                     name: 'Breathing exercises',
                     points: 10,
-                    icon: './tasks/Relax.png',
+                    icon: '/tasks/Relax.png',
                     completed: true,
                     color: '#E6FBFF'
                 },
@@ -17,7 +17,7 @@ export const useStore = defineStore("main", {
                     id: 2,
                     name: 'Take medications',
                     points: 10,
-                    icon: '',
+                    icon: '/tasks/medication.png',
                     completed: false,
                     color: '#FBE2CC'
                 },
@@ -25,7 +25,7 @@ export const useStore = defineStore("main", {
                     id: 3,
                     name: 'Get active',
                     points: 10,
-                    icon: '',
+                    icon: '/tasks/active.png',
                     completed: false,
                     color: '#FBDFED'
                 }
