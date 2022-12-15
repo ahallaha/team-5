@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 // eslint-disable-next-line
 const goHome = () => {
     window.location.href = '/';

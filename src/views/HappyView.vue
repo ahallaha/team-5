@@ -6,7 +6,7 @@ import DoneButton from '../components/DoneButton.vue'
 <template>
     <div class="main">
         <div class="header-image-wrapper">
-            <img class="header-image" src="/heading/sun_image.png" />
+            <img src="/heading/sun_image.png" />
         </div>
         <div class="content">
             <h1>That's so great your feeling happy!</h1>
@@ -36,13 +36,6 @@ p {
     line-height: 30px;
     font-family: Alegreya;
     margin: 2rem 0;
-}
-
-.header-image {
-    width: 159px;
-    height: 140px;
-    left: 108px;
-    top: 122px;
 }
 
 .header-image-wrapper {

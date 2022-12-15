@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import BottomButton from '../components/BottomButton.vue'
-// import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
 import { useStore } from "../stores/main";
 import router from '../router'
 import FeelingsInteraction from '../components/FeelingsInteraction.vue';
@@ -43,23 +42,18 @@ const moods = store.moods
 let mood = moods.pop()
 let screeningButtons = screeningButtonContent[mood]
 const keyValue = ref(0);
-console.log('!!! keyValue:', keyValue.value)
 
 let headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
 const nextAction = () => {
     const moods = store.moods
 
     if (moods.length === 0) {
-        console.log('!!! no more moods')
         router.push('/moods/wecanhelp')
     } else {
-        console.log('!!! still more moods')
         mood = moods.pop()
         screeningButtons = screeningButtonContent[mood]
         headingContent = `Can you describe the things that are making you feel ${mood.toLowerCase()}?`
         keyValue.value ++
-        console.log('!!! keyValue:', keyValue.value)
-        router.push({ path: '/moods/feelings' })
     }
 }
 </script>
@@ -69,11 +63,6 @@ const nextAction = () => {
         <div class="header-image-wrapper">
             <img src="/heading/sad_image.png" />
         </div>
-        <!-- <div class="content">
-            <h1>{{ headingContent }}</h1>
-            <p>Tap on all that apply.</p>
-        </div>
-        <ScreeningButtonContainer :options="screeningButtons"></ScreeningButtonContainer> -->
         <FeelingsInteraction :headingContent="headingContent" :screeningButtons="screeningButtons" :key="keyValue"></FeelingsInteraction>
         <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
     </div>
@@ -86,50 +75,8 @@ const nextAction = () => {
     height: 100vh;
 }
 
-.content {
-    margin-left: 25px;
-    margin-right: 25px;
-
-}
-
-p {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-    font-family: Alegreya;
-    margin: 2rem 0;
-}
-
-/* .header-image {
-    width: 191px;
-    height: 162px;
-    left: 87px;
-    top: 113px;
-} */
-
 .header-image-wrapper {
     text-align: center;
     padding-top: 7rem;
 }
-
-/* .screeners {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 14px;
-    height: 150px;
-}
-
-.screener {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    color: #4949c9;
-    background-color: #e7fbff;
-    border-style: solid;
-    border-color: #4949c9;
-    padding: 4px 14px;
-    border-radius: 50px;
-    max-height: 47px;
-} */
 </style>

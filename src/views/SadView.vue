@@ -2,7 +2,6 @@
 import BottomButton from '../components/BottomButton.vue'
 import ScreeningButtonContainer from '../components/ScreeningButtonContainer.vue'
 import { useStore } from "../stores/main";
-// import { useRouter } from 'vue-router'
 import router from '../router'
 
 const store = useStore()
@@ -39,12 +38,8 @@ const nextAction = () => {
     if (moods.length === 0) {
         router.push('/moods/wecanhelp')
     } else {
-        router.push({ path: '/moods/feelings' })
+        router.push('/moods/feelings')
     }
-}
-
-const logThis = () => {
-    console.log('logThis was triggered')
 }
 </script>
 
@@ -83,36 +78,8 @@ p {
     margin: 2rem 0;
 }
 
-.header-image {
-    width: 191px;
-    height: 162px;
-    left: 87px;
-    top: 113px;
-}
-
 .header-image-wrapper {
     text-align: center;
     padding-top: 7rem;
 }
-
-/* .screeners {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 14px;
-    height: 150px;
-}
-
-.screener {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    color: #4949c9;
-    background-color: #e7fbff;
-    border-style: solid;
-    border-color: #4949c9;
-    padding: 4px 14px;
-    border-radius: 50px;
-    max-height: 47px;
-} */
 </style>

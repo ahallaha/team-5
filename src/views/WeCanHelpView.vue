@@ -3,7 +3,6 @@ import BottomButton from '../components/BottomButton.vue'
 import DoneButton from '../components/DoneButton.vue'
 import router from '../router'
 
-// const headingContent = `Can you describe the things that are making you feel this way?`
 const nextAction = () => {
     router.push('/')
 }
@@ -44,36 +43,8 @@ p {
     margin: 2rem 0;
 }
 
-/* .header-image {
-    width: 191px;
-    height: 162px;
-    left: 87px;
-    top: 113px;
-} */
-
 .header-image-wrapper {
     text-align: center;
     padding-top: 6rem;
 }
-
-/* .screeners {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 14px;
-    height: 150px;
-}
-
-.screener {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    color: #4949c9;
-    background-color: #e7fbff;
-    border-style: solid;
-    border-color: #4949c9;
-    padding: 4px 14px;
-    border-radius: 50px;
-    max-height: 47px;
-} */
 </style>
