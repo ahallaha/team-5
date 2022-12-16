@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <h2>You noted some sad feelings this week.</h2>
-        It doesn't feel good to have these distresseing emotions. Sharing your feelings with someone can help you feel
+        It doesn't feel good to have these distressing emotions. Sharing your feelings with someone can help you feel
         better.
         <ul>
             <li><span class="li-title">Lonely</span> - Several days</li>

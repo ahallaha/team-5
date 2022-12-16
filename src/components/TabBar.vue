@@ -18,6 +18,8 @@ onMounted(async () => {
     await router.isReady()
     if (route.name === 'gethelp') {
         selected.value = 'days'
+    } else if (route.name === 'welcome') {
+        selected.value = 'tasks'
     } else {
         selected.value = route.name
     }
