@@ -23,7 +23,7 @@ const nextAction = () => {
 <style scoped>
 .main {
     padding: 1rem;
-    background-color: #fff1f8;
+    background-color: #e7fbff;
     height: 100vh;
     margin: 0;
 }

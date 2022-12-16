@@ -21,8 +21,8 @@ const props = defineProps(["options"])
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 6px;
-    height: 107px;
+    gap: 8px;
+    /* height: 107px; */
     margin: -.7rem;
 }
 </style>

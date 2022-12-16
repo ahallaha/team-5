@@ -40,9 +40,10 @@ const toggleSelect = () => {
     background-color:#e7fbff;
     border-style: solid;
     border-color: #4949c9;
-    padding: 4px 14px;
+    padding: 4px 10px;
     margin: 0 .5rem;
     border-radius: 50px;
+    height: 30px;
 }
 .screener.selected {
     color: #e7fbff;

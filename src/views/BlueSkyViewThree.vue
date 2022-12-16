@@ -43,14 +43,16 @@ const nextAction = () => {
             <p>I value...</p>
         </div>
         <WhatsImportantButtonContainer :options="screeningButtons"></WhatsImportantButtonContainer>
-        <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
+        <div class="bb-wrapper">
+            <BottomButton @bottom-button-clicked="nextAction" text="Next"></BottomButton>
+        </div>
     </div>
 </template>
 
 <style scoped>
 .main {
     padding: 1rem;
-    background-color: #fff1f8;
+    background-color: #e7fbff;
     height: 100vh;
     margin: 0;
 }
@@ -78,5 +80,9 @@ p {
 .header-image-wrapper {
     text-align: center;
     padding-top: 1rem;
+}
+
+.bb-wrapper {
+    margin-top: 2.5rem;
 }
 </style>

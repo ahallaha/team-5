@@ -23,7 +23,7 @@ const nextAction = () => {
 <style scoped>
 .main {
     padding: 1rem;
-    background-color: #f2f2ff;
+    background-color: #e7fbff;
     height: 100vh;
     margin: 0;
 }
@@ -49,6 +49,6 @@ p {
 
 .header-image-wrapper {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: .8rem;
 }
 </style>
